@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Home = () => {
   return (
     <HomeContainer>
-      <Spline scene="https://prod.spline.design/sFq9GlQUZk4iPQIi/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/35StieVM0Nm4Nc5E/scene.splinecode" />
 
       <HeroText>
         <div className="text">

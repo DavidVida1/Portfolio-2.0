@@ -8,6 +8,7 @@ export default createGlobalStyle`
       --color-warning: #F7D060; 
 
       --background-color-black:  rgba(18, 19, 21, 1);
+      --background-color: rgba(24,33,25);
       --color-white:#FFFF;
       --color-off-white:#EDF2F7;
       --color-off-white2:#E2E3E2;
@@ -66,7 +67,7 @@ body{
     height: 100%;
     overflow-x: hidden;
     font-family: var(--font-roboto);
-    background-color: #000;
+    background-color: rgba(21,21,21);
 
 }
 
