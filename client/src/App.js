@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./Header";
 import Home from "./Home";
+import PortfolioContent from "./PortfolioContent";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <GlobalStyles />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<PortfolioContent />} />
       </Routes>
     </BrowserRouter>
   );

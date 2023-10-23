@@ -7,6 +7,15 @@ export default createGlobalStyle`
       --color-success: #1B9C85;
       --color-warning: #F7D060; 
 
+      --color-light: #b7ab98;
+      --color-sepia: #D8B390;
+
+
+     --font-text: "Anton", "sans-serif";
+     --font-bold: 'Bebas Neue', sans-serif;
+
+
+
       --background-color-black:  rgba(18, 19, 21, 1);
       --background-color: rgba(24,33,25);
       --color-white:#FFFF;
@@ -70,5 +79,7 @@ body{
     background-color: rgba(21,21,21);
 
 }
+
+
 
 `;
