@@ -9,14 +9,12 @@ export default createGlobalStyle`
 
       --color-light: #b7ab98;
       --color-sepia: #D8B390;
-
+      --color-red: rgba(118, 14, 8, 1);
 
      --font-text: "Anton", "sans-serif";
      --font-bold: 'Bebas Neue', sans-serif;
 
-
-
-      --background-color-black:  rgba(18, 19, 21, 1);
+      --background-color-black:  rgba(1, 1, 1, 1);
       --background-color: rgba(24,33,25);
       --color-white:#FFFF;
       --color-off-white:#EDF2F7;
@@ -30,6 +28,7 @@ export default createGlobalStyle`
       --font-roboto:'Roboto', sans-serif;
       --meetingType-padding:4rem;
       --footer-padding:3rem; 
+      font-size:62.5%;
     }
 
 ::-webkit-scrollbar {
@@ -66,17 +65,15 @@ export default createGlobalStyle`
 #root{position:relative}
 
 html {
-  font-size:62.5%;
   scroll-behavior: smooth;
-
 }
 
 body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    font-family: var(--font-roboto);
-    background-color: rgba(1,1,1);
+    font-family: var(--font-roboto) !important;
+    background-color: var(--background-color-black);
 
 }
 
