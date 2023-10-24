@@ -76,7 +76,7 @@ body{
     height: 100%;
     overflow-x: hidden;
     font-family: var(--font-roboto);
-    background-color: rgba(21,21,21);
+    background-color: rgba(1,1,1);
 
 }
 

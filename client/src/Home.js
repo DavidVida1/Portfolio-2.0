@@ -54,7 +54,7 @@ const Home = () => {
   return (
     <HomeContainer id="home">
       <MouseTracker className="mouseTracker" />
-
+      <HeroBackground />
       <HeroText>
         <div className="text">
           <h1 id="letterEffect" className="name">
@@ -79,6 +79,17 @@ const Home = () => {
 };
 const HomeContainer = styled.section`
   width: 100%;
+  height: 100%;
+`;
+const HeroBackground = styled.section`
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/assets/reheroBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1920px 990px;
+  z-index: 0;
 `;
 
 const HeroText = styled.section`
