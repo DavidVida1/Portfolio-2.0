@@ -5,6 +5,7 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { LuGithub } from "react-icons/lu";
 import { AiOutlineInstagram } from "react-icons/ai";
 import styled from "styled-components";
+import form from "./form.svg";
 
 const Home = () => {
   const [letterEffect, setLetterEffect] = useState("A");
@@ -58,11 +59,12 @@ const Home = () => {
     <HomeContainer id="home">
       <MouseTracker className="mouseTracker" />
       <HeroBackground />
-      <div className="redLine"></div>
-      <img className="grayStroke" src="/assets/grayStrokeS.png" />
+      {/*<div className="redLine"></div>*/}
+
       <p className="craft">
         <span>C</span>rafting
       </p>
+
       <section className="heroText">
         <div className="text" id="letterEffect">
           <h1 className="name">
@@ -103,23 +105,17 @@ const HomeContainer = styled.section`
   position: relative;
   width: 100vw;
   height: 100vh;
-  & .redLine {
+
+  /*& .redLine {
     content: "";
     position: absolute;
     height: 100vh;
     width: 0.5rem;
     top: 0;
     left: 0;
-    background: var(--color-red);
+    background: var(--color-black);
     z-index: 2;
-  }
-
-  & .grayStroke {
-    position: absolute;
-    top: 5rem;
-    left: -10.5rem;
-    height: 40rem;
-  }
+  }*/
   & .craft {
     position: absolute;
     color: rgba(71, 71, 71, 0.7);
@@ -133,14 +129,15 @@ const HomeContainer = styled.section`
       color: var(--color-red);
     }
   }
+
   & .heroText {
     position: relative;
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    top: 39rem;
-    width: 45%;
-    padding-left: 7rem;
+    top: 35rem;
+    width: 100%;
+    padding-left: 110rem;
     &:hover span {
       color: var(--color-danger);
     }
@@ -183,8 +180,8 @@ const HomeContainer = styled.section`
       height: 4rem;
       width: 4rem;
       border-radius: 50%;
-      background-color: rgba(231, 60, 55, 0.4);
-      border: 1px solid rgb(231, 60, 55);
+      background-color: rgba(0, 0, 0);
+      border: 1px solid rgb(55, 55, 55);
       & a {
         display: grid;
         place-items: center;
@@ -201,13 +198,21 @@ const HomeContainer = styled.section`
 `;
 const HeroBackground = styled.section`
   position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("/assets/heroSbg2.png");
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/bgMontreal.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1920px 990px;
   z-index: 0;
+  -webkit-mask-image: url(${form});
+  mask-image: url(${form});
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100vh 100%;
+  mask-size: 100vh 100%;
+  -webkit-mask-position: left;
+  mask-position: left;
 `;
 
 const MouseTracker = styled.div`
@@ -215,14 +220,14 @@ const MouseTracker = styled.div`
   &:after {
     content: "";
     height: 7rem;
-    width: 0.4rem;
+    width: 0.5rem;
     position: absolute;
     transition: top, opacity;
     transition-duration: 600ms;
     transition-timing-function: ease;
-    background: linear-gradient(transparent, var(--color-white), transparent);
+    background: linear-gradient(transparent, var(--color-danger), transparent);
     opacity: 1;
-    z-index: 4;
+    z-index: 8;
   }
 `;
 export default Home;

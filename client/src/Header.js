@@ -18,23 +18,23 @@ const Header = () => {
     <HeaderContainer data-aos="fade-down" data-aos-delay="100">
       <nav class="navbar">
         <a href="/">
-          <img className="logo" src="/assets/logo.png" />
+          <img className="logo" src="/assets/DVlogo.png" />
         </a>
         <ul class="menu">
           <li>
             <p></p>
           </li>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="/portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -58,10 +58,20 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     & .logo {
       position: relative;
-      top: -1rem;
       width: 20%;
       height: 20%;
       font-size: 2.4rem;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 5px 5px 10px rgba (0, 0, 0, 0.6);
+      -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+      border-radius: 200px;
+      &:hover {
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
+        -moz-box-shadow: 5px 5px 10px rgb (255, 255, 255, 0.6);
+        -webkit-box-shadow: 5px 5px 10px (255, 255, 255, 0.6);
+        -o-box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
+      }
     }
     & .menu {
       display: flex;

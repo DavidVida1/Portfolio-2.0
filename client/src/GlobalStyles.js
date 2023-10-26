@@ -11,10 +11,9 @@ export default createGlobalStyle`
       --color-sepia: #D8B390;
       --color-red: rgba(118, 14, 8, 1);
 
-     --font-text: "Anton", "sans-serif";
-     --font-bold: 'Bebas Neue', sans-serif;
+ 
 
-      --background-color-black:  rgba(1, 1, 1, 1);
+      --background-color-black:  #2b2b2b;
       --background-color: rgba(24,33,25);
       --color-white:#FFFF;
       --color-off-white:#EDF2F7;
@@ -74,7 +73,7 @@ body{
     overflow-x: hidden;
     font-family: var(--font-roboto) !important;
     background-color: var(--background-color-black);
-
+    box-shadow:inset -70px 0 200px -30px rgba(0,0,0,1);
 }
 
 

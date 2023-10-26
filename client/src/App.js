@@ -1,10 +1,12 @@
 import GlobalStyles from "./GlobalStyles";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import About from "./About";
+import Portfolio from "./Portfolio";
 import Header from "./Header";
 import "./cssReset.css";
-import PortfolioContent from "./PortfolioContent";
+
+import Home from "./Home";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
 
       <Header />
       <Routes>
-        <Route path="/" element={<PortfolioContent />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </BrowserRouter>
   );
