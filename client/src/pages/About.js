@@ -62,10 +62,17 @@ const About = ({ reference }) => {
           <aside className="interestsSection">
             {interestsData.map((interest) => (
               <div>
+                <div className="icon">{interest.interestImg}</div>
                 <p>{interest.interest}</p>
-                <img src={interest.interestImg} />
               </div>
             ))}
+          </aside>
+          <h2 class="hr-lines">My Moto</h2>
+          <aside className="motoSection">
+            <h3>
+              A good Design is <psan>Honest</psan>
+            </h3>
+            <p>-Dieter Rams</p>
           </aside>
         </section>
       </div>
@@ -182,17 +189,37 @@ const AboutSection = styled.section`
     }
 
     .interestsSection {
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       color: white;
-
-      color: white;
+      gap: 10px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8.8px);
+        -webkit-backdrop-filter: blur(8.8px);
+        p {
+          font-size: 2rem;
+        }
+        .icon {
+          font-size: 3rem;
+        }
+      }
+    }
+    .motoSection {
+      h3 {
+        font-size: 3rem;
+        text-align: center;
+        color: var(--color-white);
+      }
       p {
         font-size: 2rem;
-      }
-      img {
-        height: 50px;
-        width: 50px;
+        text-align: center;
+        color: var(--color-white);
       }
     }
   }

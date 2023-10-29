@@ -1,5 +1,6 @@
 import carSVG from "../assets/carSvg.svg";
 import { AiOutlineStock } from "react-icons/ai";
+import { BiCoffeeTogo } from "react-icons/bi";
 
 const skillsData = [
   { skillName: "Html", skillLength: 90 },
@@ -12,9 +13,9 @@ const skillsData = [
 export { skillsData };
 
 const interestsData = [
-  { interest: "cars", interestImg: carSVG },
-  { interest: "Stock Market", interestImg: <AiOutlineStock /> },
-  { interest: "Stock Market" },
+  { interest: "cars", interestImg: "🚗💨" },
+  { interest: "Stock Market", interestImg: "📈" },
+  { interest: "coffee", interestImg: "☕" },
 ];
 
 export { interestsData };
