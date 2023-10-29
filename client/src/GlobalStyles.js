@@ -24,7 +24,8 @@ export default createGlobalStyle`
       --color-dark-green:#30341E;
       --color-yellow:#F29A2E;
       --color-gray:#C4C4C4;
-      --font-roboto:'Roboto', sans-serif;
+      --font-roboto:'Roboto mono', sans-serif;
+      --font-abril: 'Abril Fatface', serif;
       --meetingType-padding:4rem;
       --footer-padding:3rem; 
       font-size:62.5%;
@@ -68,12 +69,14 @@ html {
 }
 
 body{
+ 
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     font-family: var(--font-roboto) !important;
     background-color: var(--background-color-black);
     box-shadow:inset -70px 0 200px -30px rgba(0,0,0,1);
+
 }
 
 
