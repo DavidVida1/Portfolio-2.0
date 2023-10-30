@@ -3,10 +3,10 @@ import React from "react";
 import styled from "styled-components";
 import navListData from "./data/NavListData";
 
-const NavListItem = ({ item, navOnClick }) => {
+const NavListItem = ({ item }) => {
   return (
     <Container>
-      <a href="" className="nav-link" onClick={(e) => navOnClick(item._id, e)}>
+      <a href={item.href} className="nav-link">
         {item.name}
       </a>
     </Container>

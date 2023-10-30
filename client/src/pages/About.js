@@ -23,10 +23,10 @@ const About = ({ reference }) => {
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      <div className="container">
-        <section>
+      <div className="wrapper">
+        <div className="container">
           <h2 class="hr-lines">About</h2>
-          <p className="learn">learn more about me</p>
+          <p className="header">learn more about me</p>
 
           <aside className="infoSection">
             <img src="/assets/Crop-Iphone1Black2.png" alt="myPhoto" />
@@ -74,7 +74,7 @@ const About = ({ reference }) => {
             </h3>
             <p>-Dieter Rams</p>
           </aside>
-        </section>
+        </div>
       </div>
     </AboutSection>
   );
@@ -86,7 +86,7 @@ const AboutSection = styled.section`
   justify-content: center;
   z-index: 3;
 
-  .container {
+  .wrapper {
     position: absolute;
     height: 80%;
     width: 70%;
@@ -99,13 +99,13 @@ const AboutSection = styled.section`
     -webkit-backdrop-filter: blur(8.8px);
     overflow: auto;
 
-    section {
+    .container {
       margin: 30px;
 
       & .hr-lines {
         font-weight: bold;
         position: relative;
-        margin: 20px 0px;
+        margin: 40px 0px 10px 0px;
         font-size: 1.8rem;
         letter-spacing: 0.3rem;
         text-transform: uppercase;
@@ -120,106 +120,113 @@ const AboutSection = styled.section`
           background: var(--color-danger);
         }
       }
-      .learn {
+      .header {
         color: var(--color-white);
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: bold;
-        margin: 10px 0px;
+        margin: 15px 0px 25px 0px;
       }
-    }
 
-    .infoSection {
-      display: flex;
+      .infoSection {
+        display: flex;
 
-      img {
-        height: 300px;
-        width: 300px;
-        border-radius: 5px;
-        -webkit-mask-image: linear-gradient(#000, transparent);
-        mask-image: linear-gradient(#000, transparent);
+        img {
+          height: 300px;
+          width: 300px;
+          border-radius: 5px;
+          -webkit-mask-image: linear-gradient(#000, transparent);
+          mask-image: linear-gradient(#000, transparent);
+        }
+        p {
+          color: var(--color-white);
+          font-weight: bold;
+          /*font-family: var(--font-abril);*/
+          font-size: 2.3rem;
+          margin: 10px 20px;
+        }
       }
-      p {
-        color: var(--color-white);
-        font-weight: bold;
-        /*font-family: var(--font-abril);*/
-        font-size: 2.3rem;
-        margin: 10px 20px;
-      }
-    }
 
-    & .skillSection {
-      /*display: flex;
+      & .skillSection {
+        /*display: flex;
       flex-direction: row;
       flex-wrap: wrap;*/
 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+        display: grid;
+        margin-top: 35px;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
 
-      div {
-        display: flex;
-        flex-direction: column;
+        div {
+          display: flex;
+          flex-direction: column;
 
-        & .skillName {
-          color: var(--color-danger);
-          font-size: 1.3rem;
-          font-weight: bold;
-        }
-        & .skillContainer {
-          margin: 10px 0px;
-          flex-grow: 2;
-          width: 100%; /* Full width */
-          background-color: #ddd; /* Grey background */
-
-          & .skills {
-            text-align: right; /* Right-align text */
-            padding-top: 10px; /* Add top padding */
-            padding-bottom: 10px; /* Add bottom padding */
-            color: var(--color-danger); /* White text color */
+          & .skillName {
+            color: var(--color-danger);
+            font-size: 1.3rem;
+            font-weight: bold;
           }
+          & .skillContainer {
+            margin: 10px 0px;
+            flex-grow: 2;
+            width: 100%; /* Full width */
+            background-color: #ddd; /* Grey background */
 
-          & .html {
-            /*width: ${(props) => props.skillwidth}%;*/
-            content: ${(props) => props.skillwidth};
-            background-color: var(--color-sepia);
+            & .skills {
+              text-align: right; /* Right-align text */
+              padding-top: 10px; /* Add top padding */
+              padding-bottom: 10px; /* Add bottom padding */
+              color: var(--color-danger); /* White text color */
+            }
+
+            & .html {
+              /*width: ${(props) => props.skillwidth}%;*/
+              content: ${(props) => props.skillwidth};
+              background-color: var(--color-sepia);
+            }
           }
         }
       }
-    }
 
-    .interestsSection {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      color: white;
-      gap: 10px;
-      div {
-        display: flex;
-        align-items: center;
+      .interestsSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: white;
+        margin-top: 35px;
         gap: 10px;
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 10px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(8.8px);
-        -webkit-backdrop-filter: blur(8.8px);
+        div {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          gap: 10px;
+          background: rgba(0, 0, 0, 0.6);
+          border-radius: 10px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(8.8px);
+          -webkit-backdrop-filter: blur(8.8px);
+          p {
+            font-size: 2rem;
+          }
+          .icon {
+            font-size: 3rem;
+          }
+        }
+      }
+      .motoSection {
+        margin-top: 35px;
+        h3 {
+          margin: 30px;
+          font-size: 3rem;
+          text-align: center;
+          color: var(--color-white);
+          color: var(--color-primary);
+        }
         p {
           font-size: 2rem;
+          text-align: center;
+          color: var(--color-white);
+          margin-bottom: 50px;
         }
-        .icon {
-          font-size: 3rem;
-        }
-      }
-    }
-    .motoSection {
-      h3 {
-        font-size: 3rem;
-        text-align: center;
-        color: var(--color-white);
-      }
-      p {
-        font-size: 2rem;
-        text-align: center;
-        color: var(--color-white);
       }
     }
   }

@@ -13,7 +13,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact.js";
 
 function App() {
-  const homeRef = useRef();
+  /* const homeRef = useRef();
   const aboutRef = useRef();
   const portfolioRef = useRef();
   const contactRef = useRef();
@@ -29,22 +29,18 @@ function App() {
     sections.map((section) => {
       console.log(section.ref.current);
     });
-  };
+  };*/
 
   return (
     <BrowserRouter>
       <GlobalStyles />
+      <Header />
       <PageWrapper />
-      <Header reference={homeRef} sectionActive={handleSectionActive} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route reference={aboutRef} path="/about" element={<About />} />
-        <Route
-          reference={portfolioRef}
-          path="/portfolio"
-          element={<Portfolio />}
-        />
-        <Route reference={contactRef} path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );

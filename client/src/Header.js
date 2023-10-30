@@ -10,17 +10,6 @@ import NavListItem from "./NavListItem";
 const Header = ({ reference }) => {
   const [navList, setNavList] = useState(navListData);
 
-  const handleNavOnClick = (id, e) => {
-    const newNavList = navList.map((nav) => {
-      nav.active = false;
-      if (nav._id === id) nav.active = true;
-      return nav;
-    });
-    setNavList(newNavList);
-    e.preventDefault();
-    console.log(id);
-  };
-
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -30,7 +19,7 @@ const Header = ({ reference }) => {
   }, []);
 
   return (
-    <HeaderContainer data-aos="fade-down" data-aos-delay="100" ref={reference}>
+    <HeaderContainer data-aos="fade-up" data-aos-delay="100" ref={reference}>
       <nav class="navbar">
         <a href="/">
           <img className="logo" src="/assets/DVlogo.png" />
@@ -40,11 +29,7 @@ const Header = ({ reference }) => {
             <p className="whiteLine"></p>
           </li>
           {navList.map((item) => (
-            <NavListItem
-              key={item._id}
-              item={item}
-              navOnClick={handleNavOnClick}
-            />
+            <NavListItem key={item._id} item={item} />
           ))}
         </ul>
       </nav>
@@ -53,7 +38,7 @@ const Header = ({ reference }) => {
 };
 const HeaderContainer = styled.header`
   width: 100%;
-  height: auto;
+  height: 65px;
   color: var(--color-white);
   position: absolute;
   font-weight: bold;

@@ -164,7 +164,7 @@ const HomeSection = styled.section`
   & .heroSection {
     position: absolute;
     top: 40%;
-    right: -50%;
+    right: -57%;
     width: 100%;
     & .heroText {
       display: flex;
