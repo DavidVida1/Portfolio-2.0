@@ -5,6 +5,7 @@ import { skillsData } from "../data/myData";
 import { interestsData } from "../data/myData";
 import styled from "styled-components";
 import AOS from "aos";
+import Skill from "./Skills";
 import "aos/dist/aos.css";
 
 const About = ({ reference }) => {
@@ -21,11 +22,11 @@ const About = ({ reference }) => {
       id="about"
       ref={reference}
       data-aos="fade-up"
-      data-aos-delay="100"
+      data-aos-delay="200"
     >
       <div className="wrapper">
         <div className="container">
-          <h2 class="hr-lines">About</h2>
+          <h2 className="hr-lines">About</h2>
           <p className="header">learn more about me</p>
 
           <aside className="infoSection">
@@ -40,25 +41,15 @@ const About = ({ reference }) => {
             </p>
           </aside>
 
-          <h2 class="hr-lines">Skills</h2>
+          <h2 className="hr-lines">Skills</h2>
 
           <aside className="skillSection">
             {skillsData.map((skill) => (
-              <div>
-                <p className="skillName">{skill.skillName}</p>
-
-                <div className="skillContainer">
-                  <div
-                    className="skills html"
-                    skillwidth={skill.skillLength}
-                  ></div>
-                  {/*create component*/}
-                </div>
-              </div>
+              <Skill key={skill.name} skill={skill} />
             ))}
           </aside>
 
-          <h2 class="hr-lines">Interests</h2>
+          <h2 className="hr-lines">Interests</h2>
           <aside className="interestsSection">
             {interestsData.map((interest) => (
               <div>
@@ -67,10 +58,10 @@ const About = ({ reference }) => {
               </div>
             ))}
           </aside>
-          <h2 class="hr-lines">My Moto</h2>
+          <h2 className="hr-lines">My Moto</h2>
           <aside className="motoSection">
             <h3>
-              A good Design is <psan>Honest</psan>
+              A good Design is <span>Honest</span>
             </h3>
             <p>-Dieter Rams</p>
           </aside>
@@ -115,7 +106,7 @@ const AboutSection = styled.section`
           content: " ";
           display: block;
           height: 2px;
-          width: 120px;
+          width: 130px;
           transform: translate3d(100%, -0.9rem, 0);
           background: var(--color-danger);
         }
@@ -148,44 +139,10 @@ const AboutSection = styled.section`
       }
 
       & .skillSection {
-        /*display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;*/
-
         display: grid;
         margin-top: 35px;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-
-        div {
-          display: flex;
-          flex-direction: column;
-
-          & .skillName {
-            color: var(--color-danger);
-            font-size: 1.3rem;
-            font-weight: bold;
-          }
-          & .skillContainer {
-            margin: 10px 0px;
-            flex-grow: 2;
-            width: 100%; /* Full width */
-            background-color: #ddd; /* Grey background */
-
-            & .skills {
-              text-align: right; /* Right-align text */
-              padding-top: 10px; /* Add top padding */
-              padding-bottom: 10px; /* Add bottom padding */
-              color: var(--color-danger); /* White text color */
-            }
-
-            & .html {
-              /*width: ${(props) => props.skillwidth}%;*/
-              content: ${(props) => props.skillwidth};
-              background-color: var(--color-sepia);
-            }
-          }
-        }
       }
 
       .interestsSection {
@@ -194,6 +151,7 @@ const AboutSection = styled.section`
         color: white;
         margin-top: 35px;
         gap: 10px;
+
         div {
           display: flex;
           align-items: center;
@@ -204,11 +162,16 @@ const AboutSection = styled.section`
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(8.8px);
           -webkit-backdrop-filter: blur(8.8px);
+
           p {
             font-size: 2rem;
           }
           .icon {
             font-size: 3rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+              rgba(0, 0, 0, 0.12) 0px -12px 30px,
+              rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+              rgba(0, 0, 0, 0.09) 0px -3px 5px;
           }
         }
       }

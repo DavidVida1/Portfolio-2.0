@@ -1,19 +1,19 @@
 import GlobalStyles from "./GlobalStyles";
 import React from "react";
 import styled from "styled-components";
-import navListData from "./data/NavListData";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
 
 const NavListItem = ({ item }) => {
   return (
-    <Container>
-      <a href={item.href} className="nav-link">
+    <Wrapper>
+      <NavLink to={item.href} className="nav-link">
         {item.name}
-      </a>
-    </Container>
+      </NavLink>
+    </Wrapper>
   );
 };
 
-const Container = styled.li`
+const Wrapper = styled.div`
   margin: 0 2rem;
   transition: all 0.3s ease-in-out;
 
@@ -40,9 +40,15 @@ const Container = styled.li`
       opacity: 1;
       transform: translateX(-100%);
     }
-    &:hover::after,
-    &:focus::after {
+    &:hover::after {
       transform: translateX(0);
+    }
+
+    &:active,
+    &.active {
+      text-decoration: underline;
+      text-decoration-color: var(--color-white);
+      text-decoration-thickness: 2px;
     }
   }
 `;

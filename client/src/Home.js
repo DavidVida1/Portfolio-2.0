@@ -78,7 +78,7 @@ const Home = () => {
         <p className="craftLine"></p>
       </div>
 
-      <section className="heroSection" data-aos="fade-up" data-aos-delay="100">
+      <section className="heroSection" data-aos="fade-up" data-aos-delay="200">
         <aside className="heroText">
           <div className="text" id="letterEffect">
             <h2 className="name">
@@ -127,15 +127,15 @@ const HomeSection = styled.section`
   width: 100vw;
   height: 100vh;
 
-  /*& .redLine {
+  /* & .redLine {
     content: "";
     position: absolute;
     height: 100vh;
     width: 0.5rem;
     top: 0;
     left: 0;
-    background: var(--color-black);
-    z-index: 2;
+    background: var(--color-danger);
+    z-index: 5;
   }*/
 
   & .craft {
@@ -164,8 +164,9 @@ const HomeSection = styled.section`
   & .heroSection {
     position: absolute;
     top: 40%;
-    right: -57%;
-    width: 100%;
+    right: 0;
+    width: 50vw;
+
     & .heroText {
       display: flex;
       flex-direction: column;
@@ -176,7 +177,7 @@ const HomeSection = styled.section`
         color: var(--color-danger);
       }
       & .text {
-        max-width: 37%;
+        max-width: 80%;
         color: var(--color-gray);
         & h2 {
           font-size: 1.8rem;
@@ -192,8 +193,9 @@ const HomeSection = styled.section`
           font-size: 2.7rem;
           color: white;
           & span {
-            font-size: 2.7rem;
-            text-shadow: rgba(216, 179, 144, 0.5) 1px 0 10px;
+            font-size: 2.8rem;
+            text-shadow: rgba(216, 179, 144, 0.5) 0px 0 5px,
+              var(--color-danger) 0 0 1px;
             color: var(--color-danger);
           }
         }
@@ -205,13 +207,13 @@ const HomeSection = styled.section`
         justify-content: center;
         margin-top: 20px;
         height: 100%;
-        width: 35%;
+        width: 70%;
         gap: 2rem;
 
         & li p {
           content: "";
           height: 0.2rem;
-          width: 8rem;
+          width: 25rem;
           background: var(--color-white);
         }
         & .link {
@@ -219,15 +221,15 @@ const HomeSection = styled.section`
           height: 4rem;
           width: 4rem;
           border-radius: 50%;
-          background-color: rgba(0, 0, 0);
-          border: 1px solid rgb(55, 55, 55);
+          /*background-color: rgba(0, 0, 0);
+          border: 1px solid rgb(55, 55, 55);*/
           & a {
             display: grid;
             place-items: center;
             width: 100%;
             height: 100%;
             color: var(--color-white);
-            font-size: 2rem;
+            font-size: 2.6rem;
             transition: all 0.3s ease-in-out;
             &:hover {
               color: var(--color-danger);
@@ -249,7 +251,7 @@ const MouseTracker = styled.div`
     transition: top, opacity;
     transition-duration: 600ms;
     transition-timing-function: ease;
-    background: linear-gradient(transparent, var(--color-danger), transparent);
+    background: linear-gradient(transparent, var(--color-white), transparent);
     opacity: 1;
     z-index: 8;
   }

@@ -9,6 +9,30 @@ import styled from "styled-components";
 
 const Portoflio = ({ reference }) => {
   const navigate = useNavigate();
+  const [navSelected, setNavSelected] = useState(
+    navPortfolio[0].category
+  ); /*valeur par defaut dans useState donc [0]*/
+  const [selectedProjectsByCategory, setSelectedProjectsByCategory] =
+    useState(projects);
+
+  useEffect(() => {
+    setSelectedProjectsByCategory(
+      projects.filter((navItem) => {
+        return (
+          navItem.category == navSelected ||
+          navSelected == navPortfolio[0].category
+        );
+      })
+    );
+
+    let btn = document.getElementsByClassName("nav");
+
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].classList.remove("active");
+
+      if (btn[i].textContent == navSelected) btn[i].classList.add("active");
+    }
+  }, [navSelected]);
 
   useEffect(() => {
     AOS.init({
@@ -19,33 +43,52 @@ const Portoflio = ({ reference }) => {
   }, []);
 
   return (
-    <PortoflioContainer
+    <PortoflioSection
       id="portfolio"
       ref={reference}
       data-aos="fade-up"
-      data-aos-delay="100"
+      data-aos-delay="200"
     >
       <div className="wrapper">
         <div className="container">
-          <h2 class="hr-lines">About</h2>
+          <h2 class="hr-lines">Portfolio</h2>
           <p className="subtitle">my projects</p>
           <aside className="navSection">
             {navPortfolio.map((nav) => {
-              return <NavLink className={"nav"}> {nav.category}</NavLink>;
+              return (
+                <button
+                  className="nav active"
+                  onClick={() => {
+                    setNavSelected(nav.category);
+                  }}
+                >
+                  {nav.category}
+                </button>
+              );
             })}
           </aside>
 
-          <aside className="projectSection">
-            {projects.map((project) => {
-              return <img className="a" src={project.projectImg} />;
+          <aside
+            className="projectSection"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            {/*selectedCategory est definie a linterieure ddu useEffect et a donc acces a Navportfolio*/}
+            {selectedProjectsByCategory.map((project) => {
+              return (
+                <a href={project.link}>
+                  <img className="a" src={project.projectImg} />
+                  <p className="overlay">{project.description}</p>
+                </a>
+              );
             })}
           </aside>
         </div>
       </div>
-    </PortoflioContainer>
+    </PortoflioSection>
   );
 };
-const PortoflioContainer = styled.header`
+const PortoflioSection = styled.section`
   height: 100vh;
   width: 100%;
   display: flex;
@@ -81,7 +124,7 @@ const PortoflioContainer = styled.header`
           content: " ";
           display: block;
           height: 2px;
-          width: 120px;
+          width: 130px;
           transform: translate3d(100%, -0.9rem, 0);
           background: var(--color-danger);
         }
@@ -102,73 +145,62 @@ const PortoflioContainer = styled.header`
           font-weight: bold;
           padding: 5px 10px;
           margin: 10px 3px;
-          border-radius: 2px;
+          border-radius: 4px;
           color: var(--color-white);
           background: rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-          transition: all 0.3s ease-in-out;
 
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0 0px 4px rgba(255, 255, 255, 0.75);
           &:hover {
             color: var(--color-sepia);
             box-shadow: 0 4px 30px rgba(216, 179, 144, 0.2);
           }
+          &.active {
+            color: var(--color-primary);
+          }
         }
       }
 
-      .projectSection {
+      & .projectSection {
         display: grid;
-        grid-gap: 10px;
-        margin-top: 30px;
-        grid-template-columns: repeat(4, 20%) /* 100px 100px 100px 100px*/;
-        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 370px 370px;
         justify-content: center;
-        position: relative;
-        .box {
-          background-color: #444;
-          color: #fff;
-          border-radius: 5px;
-          padding: 20px;
-          font-size: 150%;
-        }
-        & img:first-child {
-          width: 100%;
-          height: 100%;
-          grid-column: 1/3;
-          grid-row: 1/3;
-          border-radius: 5px;
-          /* background-color: red;*/
-        }
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+        & a {
+          position: relative;
+          & img {
+            border-radius: 5px;
+            height: 300px;
+            width: 370px;
+          }
+          &:hover ::after {
+            content: " ";
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 0;
+            left: 0;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            margin: 15px;
+          }
 
-        & img:nth-child(2) {
-          width: 100%;
-          height: 100%;
-          grid-column: 3;
-          grid-row: 1;
-          border-radius: 5px;
-          /*background-color: blue;*/
-        }
-        & img:nth-child(3) {
-          width: 100%;
-          height: 100%;
-          grid-column: 3;
-          grid-row: 2;
-          border-radius: 5px;
-          /*  background-color: green;*/
-        }
-        & :nth-child(4) {
-          width: 100%;
-          height: 100%;
-          grid-column: 4;
-          grid-row: 1/3;
-          border-radius: 5px;
-          /*background-color: pink;*/
-        }
-        & :nth-child(5) {
-          width: 100%;
-          height: 100%;
-          grid-column: 1/5;
-          grid-row: 3/5;
-          border-radius: 5px;
+          &:hover ::before {
+            content: " ";
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            bottom: 0;
+            right: 0;
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+            margin: 15px 15px;
+          }
+
+          .overlay {
+          }
         }
       }
     }
