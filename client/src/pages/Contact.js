@@ -22,7 +22,11 @@ const Contact = () => {
       <div className="wrapper" data-aos="fade-up" data-aos-delay="200">
         <div className="container">
           <aside className="side">
-            <form className="formContainer">
+            <form
+              className="formContainer"
+              action="https://formspree.io/f/xjvqzolw"
+              method="POST"
+            >
               <h2 className="hr-lines">Message Me!</h2>
 
               <div className="nameWrapper">
@@ -48,10 +52,10 @@ const Contact = () => {
               </div>
 
               <label for="email">
-                <b>Email</b>
+                <b>Your Email</b>
               </label>
               <input
-                type="text"
+                type="email"
                 placeholder="Enter Email"
                 name="email"
                 id="email"
@@ -147,6 +151,7 @@ const ContactSection = styled.section`
           }
 
           input[type="text"],
+          input[type="email"],
           select,
           textarea {
             width: 100%;
