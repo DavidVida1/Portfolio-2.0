@@ -100,12 +100,12 @@ const Home = () => {
               <p></p>
             </li>
             <li className="link">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/david-vidal-dev/">
                 <BiLogoLinkedin />
               </a>
             </li>
             <li className="link">
-              <a href="#">
+              <a href="https://github.com/DavidVida1">
                 <LuGithub />
               </a>
             </li>

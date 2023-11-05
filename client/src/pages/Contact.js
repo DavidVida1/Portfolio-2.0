@@ -86,12 +86,12 @@ const Contact = () => {
               <p>Contact me easily through.</p>
               <div className="socials">
                 <div className="link">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/david-vidal-dev/">
                     <BiLogoLinkedin />
                   </a>
                 </div>
                 <div className="link">
-                  <a href="#">
+                  <a href="https://github.com/DavidVida1">
                     <LuGithub />
                   </a>
                 </div>
@@ -144,7 +144,7 @@ const ContactSection = styled.section`
           border-radius: 5px;
           padding: clamp(2rem, 15vw, 4rem);
           padding-bottom: 2rem;
-          padding-top: 1rem;
+          padding-top: 2rem;
 
           & label {
             font-size: 1.5rem;
