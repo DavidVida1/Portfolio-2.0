@@ -38,7 +38,7 @@ const Wrapper = styled.div`
       transition: opacity 300ms, transform 300ms;
 
       opacity: 1;
-      transform: translateX(-100%);
+      transform: translateX(-101%);
     }
     &:hover::after {
       transform: translateX(0);

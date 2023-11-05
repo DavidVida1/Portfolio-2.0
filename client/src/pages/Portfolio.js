@@ -1,14 +1,13 @@
 import GlobalStyles from "../GlobalStyles";
 import React from "react";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { navPortfolio, projects } from "../data/myData";
 import styled from "styled-components";
 
 const Portoflio = ({ reference }) => {
-  const navigate = useNavigate();
   const [navSelected, setNavSelected] = useState(
     navPortfolio[0].category
   ); /*valeur par defaut dans useState donc [0]*/
@@ -108,6 +107,7 @@ const PortoflioSection = styled.section`
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
     overflow: auto;
+
     .container {
       margin: 30px;
 
@@ -136,6 +136,7 @@ const PortoflioSection = styled.section`
         font-weight: bold;
         margin: 15px 0px 25px 0px;
       }
+
       & .navSection {
         display: flex;
         flex-direction: row;
@@ -168,41 +169,77 @@ const PortoflioSection = styled.section`
         flex-wrap: wrap;
         gap: 20px;
         margin-top: 30px;
+
         & a {
           position: relative;
+          height: 100%;
+          width: 100%;
+
           & img {
+            position: relative;
             border-radius: 5px;
-            height: 300px;
-            width: 370px;
+            height: 100%;
+            width: 100%;
           }
-          &:hover ::after {
+
+          &::after,
+          &::before {
             content: " ";
             position: absolute;
             height: 50px;
             width: 50px;
-            top: 0;
-            left: 0;
-            border-top: 3px solid white;
-            border-left: 3px solid white;
-            margin: 15px;
+            z-index: 1;
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            border: 3px solid white;
           }
 
-          &:hover ::before {
-            content: " ";
+          &::after {
+            top: 15px;
+            left: 15px;
+            border-bottom: 3px solid transparent;
+            border-right: 3px solid transparent;
+          }
+
+          &::before {
+            bottom: 15px;
+            right: 15px;
+            border-top: 3px solid transparent;
+            border-left: 3px solid transparent;
+          }
+
+          & .overlay {
             position: absolute;
-            height: 50px;
-            width: 50px;
-            bottom: 0;
-            right: 0;
-            border-bottom: 3px solid white;
-            border-right: 3px solid white;
-            margin: 15px 15px;
+            inset: 15px;
+            padding: 10px;
+            color: var(--color-white);
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: all 0.8s ease-in-out;
+            font-size: 1.5rem;
+            opacity: 0;
           }
 
-          .overlay {
+          &:hover::after,
+          &:hover::before,
+          &:hover .overlay {
+            opacity: 1;
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          & a {
+            height: clamp(300px, 20vw, 370px);
+            width: clamp(300px, 50vw, 70%);
+            box-shadow: 0 0 5px red;
           }
         }
       }
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
     }
   }
 `;

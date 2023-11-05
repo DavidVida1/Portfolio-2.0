@@ -1,10 +1,7 @@
 import GlobalStyles from "../GlobalStyles";
 import React from "react";
-import { useEffect, useState } from "react";
-import { skillsData } from "../data/myData";
-import { interestsData } from "../data/myData";
 import styled from "styled-components";
-import AOS from "aos";
+
 import "aos/dist/aos.css";
 
 const Skill = ({ skill }) => {
@@ -50,6 +47,9 @@ const SkillWrapper = styled.section`
           box-shadow: 0 0 4px var(--color-black);
         }
       }
+    }
+    @media screen and (max-width: 800px) {
+      align-items: center;
     }
   }
 `;

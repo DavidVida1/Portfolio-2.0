@@ -24,6 +24,7 @@ const Contact = () => {
           <aside className="side">
             <form className="formContainer">
               <h2 className="hr-lines">Message Me!</h2>
+
               <div className="nameWrapper">
                 <div className="nameContainer">
                   <label for="fname">First Name</label>
@@ -34,6 +35,7 @@ const Contact = () => {
                     placeholder="Your name.."
                   />
                 </div>
+
                 <div className="nameContainer">
                   <label for="lname">Last Name</label>
                   <input
@@ -44,6 +46,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
+
               <label for="email">
                 <b>Email</b>
               </label>
@@ -69,6 +72,7 @@ const Contact = () => {
                 name="message"
                 placeholder="Write something.."
                 className="message"
+                rows="5"
               ></textarea>
 
               <input type="submit" value="Submit" />
@@ -77,8 +81,6 @@ const Contact = () => {
             <div className="contact">
               <p>Contact me easily through.</p>
               <div className="socials">
-                <p></p>
-
                 <div className="link">
                   <a href="#">
                     <BiLogoLinkedin />
@@ -94,10 +96,6 @@ const Contact = () => {
                     <AiOutlineInstagram />
                   </a>
                 </div>
-
-                <div>
-                  <p></p>
-                </div>
               </div>
             </div>
           </aside>
@@ -108,34 +106,41 @@ const Contact = () => {
 };
 const ContactSection = styled.section`
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 
   .wrapper {
     position: absolute;
-    height: 80%;
-    margin-top: 20%;
+    height: 80vh;
     width: 100%;
     inset: 0;
     margin: auto;
 
     .container {
       display: grid;
-      grid-template-rows: 75% 25%;
       justify-content: center;
+      width: 100%;
 
       & .side {
         display: grid;
         place-items: center;
         position: relative;
         background: rgba(0, 0, 0, 0.6);
-        border-radius: 10px;
-
+        border-radius: 1rem;
         color: var(--color-white);
+        grid-template-rows: auto 11rem;
+        max-height: 80vh;
+        overflow-y: scroll;
 
         & .formContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
           height: 100%;
           border-radius: 5px;
-          padding: 40px;
+          padding: clamp(2rem, 15vw, 4rem);
+          padding-bottom: 2rem;
+          padding-top: 1rem;
 
           & label {
             font-size: 1.5rem;
@@ -145,20 +150,18 @@ const ContactSection = styled.section`
           select,
           textarea {
             width: 100%;
-            padding: 12px;
+            padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
             resize: vertical;
           }
+
           & .subject {
             height: 50px;
           }
           & .message {
             width: 100%;
-            height: 170px;
           }
           & input[type="submit"] {
             background-color: var(--color-danger);
@@ -171,12 +174,22 @@ const ContactSection = styled.section`
               background-color: #45a049;
             }
           }
+
           & .nameWrapper {
             display: flex;
-            gap: 10px;
+            gap: 0px 1rem;
 
             & .nameContainer {
               width: 100%;
+
+              & input {
+                margin-top: 1rem;
+              }
+            }
+
+            @media screen and (max-width: 650px) {
+              flex-direction: column;
+              gap: 1rem 0px;
             }
           }
 
@@ -185,7 +198,6 @@ const ContactSection = styled.section`
             position: relative;
             top: 0;
             left: 0;
-            margin: 0px 0px 10px 0px;
             font-size: 1.8rem;
             letter-spacing: 0.3rem;
             text-transform: uppercase;
@@ -198,51 +210,49 @@ const ContactSection = styled.section`
               width: 160px;
               transform: translate3d(100%, -0.9rem, 0);
               background: var(--color-danger);
+
+              @media screen and (max-width: 600px) {
+                width: 150px;
+              }
             }
           }
         }
+
         & .contact {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          height: 150px;
-          width: 600px;
-          margin-top: 50px;
+          height: 100%;
+          width: 70%;
+          gap: 1rem 0;
           color: var(--color-white);
 
           & p {
             text-align: center;
-            margin-bottom: 10px;
-            font-size: 3rem;
+            font-size: clamp(3rem, 4vw, 3rem);
             font-family: var(--font-abril);
           }
+
           & .socials {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 0 2rem;
 
-            & p {
-              content: "";
-              height: 0.2rem;
-              width: 8rem;
-              background: var(--color-white);
-            }
             & .link {
               position: relative;
               height: 4rem;
               width: 4rem;
               border-radius: 50%;
-              background-color: rgba(0, 0, 0);
-              border: 1px solid rgb(55, 55, 55);
+
               & a {
                 display: grid;
                 place-items: center;
                 width: 100%;
                 height: 100%;
                 color: var(--color-white);
-                font-size: 2rem;
+                font-size: 2.8rem;
                 transition: all 0.3s ease-in-out;
                 &:hover {
                   color: var(--color-danger);

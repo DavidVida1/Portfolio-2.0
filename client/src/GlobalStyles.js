@@ -74,10 +74,8 @@ body{
     height: 100vh;
     overflow-x: hidden;
     font-family: var(--font-roboto) !important;
-    background-color: var(--background-color-black);
-  box-shadow:inset -70px 0 200px -30px rgba(0,0,0,1); 
-
-
+    background-color: var(--background-color-black);  
+    box-shadow:inset -70px 0 200px -30px rgba(0,0,0,1); 
 }
 
 

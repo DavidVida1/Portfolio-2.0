@@ -1,6 +1,6 @@
 import GlobalStyles from "../GlobalStyles";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { skillsData } from "../data/myData";
 import { interestsData } from "../data/myData";
 import styled from "styled-components";
@@ -136,6 +136,15 @@ const AboutSection = styled.section`
           font-size: 2.3rem;
           margin: 10px 20px;
         }
+
+        @media screen and (max-width: 800px) {
+          flex-direction: column;
+          justify-content: center;
+
+          img {
+            align-self: center;
+          }
+        }
       }
 
       & .skillSection {
@@ -143,6 +152,12 @@ const AboutSection = styled.section`
         margin-top: 35px;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+
+        @media screen and (max-width: 800px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
       }
 
       .interestsSection {
@@ -174,6 +189,11 @@ const AboutSection = styled.section`
               rgba(0, 0, 0, 0.09) 0px -3px 5px;
           }
         }
+        @media screen and (max-width: 800px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
       }
       .motoSection {
         margin-top: 35px;
@@ -191,6 +211,10 @@ const AboutSection = styled.section`
           margin-bottom: 50px;
         }
       }
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
     }
   }
 `;

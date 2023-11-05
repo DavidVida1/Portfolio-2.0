@@ -7,6 +7,7 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { LuGithub } from "react-icons/lu";
 import { AiOutlineInstagram } from "react-icons/ai";
 import styled from "styled-components";
+import backCraft from "./assets/bgMontreal.jpg";
 
 const Home = () => {
   const [letterEffect, setLetterEffect] = useState("A");
@@ -142,13 +143,31 @@ const HomeSection = styled.section`
     position: absolute;
     display: flex;
     align-items: center;
-    color: rgba(71, 71, 71, 0.7);
-    font-size: 6rem;
+    color: transparent;
+    font-size: min(4vw, 6rem);
     top: 20rem;
     right: 8rem;
     font-weight: bold;
     letter-spacing: 2rem;
     text-transform: uppercase;
+
+    -webkit-text-stroke: 1px rgba(71, 71, 71, 0.7);
+
+    background-image: url(${backCraft});
+    -webkit-background-clip: text;
+    /*background-origin: border-box;*/
+    background-clip: text;
+    /*background-size: contain;*/
+    background-size: cover;
+    background-position: bottom left;
+    animation: back 20s linear infinite;
+
+    @keyframes back {
+      100% {
+        background-position: 2000px 0;
+      }
+    }
+
     span {
       color: var(--color-danger);
     }
@@ -156,7 +175,7 @@ const HomeSection = styled.section`
     & .craftLine {
       content: "";
       height: 0.3rem;
-      width: 25rem;
+      width: max(1rem, 15vw);
       background: var(--color-white);
     }
   }
@@ -180,20 +199,20 @@ const HomeSection = styled.section`
         max-width: 80%;
         color: var(--color-gray);
         & h2 {
-          font-size: 1.8rem;
+          font-size: clamp(2.5rem, 2vw, 1.8rem);
           letter-spacing: 1rem;
           text-transform: uppercase;
         }
         & h3 {
-          font-size: 5rem;
+          font-size: clamp(1rem, 4.2vw, 5rem);
           letter-spacing: 0.5rem;
           color: var(--color-sepia);
         }
         & p {
-          font-size: 2.7rem;
+          font-size: clamp(1rem, 3vw, 2.7rem);
           color: white;
           & span {
-            font-size: 2.8rem;
+            font-size: clamp(1rem, 3vw, 2.7rem);
             text-shadow: rgba(216, 179, 144, 0.5) 0px 0 5px,
               var(--color-danger) 0 0 1px;
             color: var(--color-danger);
@@ -213,7 +232,7 @@ const HomeSection = styled.section`
         & li p {
           content: "";
           height: 0.2rem;
-          width: 25rem;
+          width: clamp(1rem, 10vw, 25rem);
           background: var(--color-white);
         }
         & .link {
@@ -233,6 +252,31 @@ const HomeSection = styled.section`
             transition: all 0.3s ease-in-out;
             &:hover {
               color: var(--color-danger);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    & .heroSection {
+      position: absolute;
+      top: 35%;
+      left: 5%;
+      width: 90vw;
+
+      & .heroText {
+        & .text {
+          & h2 {
+            font-size: clamp(2rem, 2vw, 1.8rem);
+          }
+          & h3 {
+            font-size: clamp(3rem, 2vw, 1.8rem);
+          }
+          & p {
+            font-size: clamp(1.5rem, 3vw, 2.7rem);
+            & span {
+              font-size: clamp(1.5rem, 3vw, 2.7rem);
             }
           }
         }

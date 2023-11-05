@@ -54,18 +54,33 @@ const PageWrapper = styled.div`
   right: 0;
   bottom: 0;
   background-image: url("/assets/bgMontreal.jpg");
-  background-position: center;
+
+  background-position: top left;
   background-repeat: no-repeat;
-  background-size: 1920px 990px;
+  background-size: 100vh 100%;
   z-index: 0;
-  -webkit-mask-image: url(${form});
-  mask-image: url(${form});
+  -webkit-mask-image: url(${form}),
+    linear-gradient(to bottom, #000, transparent 70%),
+    linear-gradient(to bottom, transparent 98%, #000),
+    linear-gradient(to top, transparent 55%, #000),
+    linear-gradient(to left, transparent 75%, #000),
+    linear-gradient(to right, transparent 100%, #000);
+  mask-image: url(${form}), linear-gradient(to bottom, #000, transparent 70%),
+    linear-gradient(to bottom, transparent 95%, #000),
+    linear-gradient(to top, transparent 55%, #000),
+    linear-gradient(to left, transparent 75%, #000),
+    linear-gradient(to right, transparent 100%, #000);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100vh 100%;
   mask-size: 100vh 100%;
-  -webkit-mask-position: left;
-  mask-position: left;
+
+  -webkit-mask-position: 0 100%, 1%;
+  mask-position: 0 100%, 1%;
+
+  @media screen and not (aspect-ratio: 16/9) {
+    background-size: 100vh 100%;
+  }
 `;
 
 export default App;

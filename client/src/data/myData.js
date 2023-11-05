@@ -49,23 +49,26 @@ const projects = [
   {
     category: "SCHOOL",
     name: "E-commerce School Project",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
     projectImg: allStar,
-    link: "#",
+    link: "https://cb-group-project-client.vercel.app/",
   },
   {
     category: "SCHOOL",
     name: "Car-Project-1",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
     projectImg: carV1,
     link: "#",
   },
   {
     category: "UI/UX",
     name: "Lounge Website UI/UX",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
     projectImg: lounge,
-    link: "#",
+    link: "https://davidvida1.github.io/Lounge/",
   },
   {
     category: "APP",
@@ -78,7 +81,8 @@ const projects = [
   {
     category: "WEB",
     name: "This Portfolio",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
     projectImg: portfolio2,
     link: "#",
   },
