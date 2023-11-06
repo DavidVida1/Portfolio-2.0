@@ -233,7 +233,6 @@ const PortoflioSection = styled.section`
           & a {
             height: clamp(300px, 20vw, 370px);
             width: clamp(300px, 50vw, 70%);
-            box-shadow: 0 0 5px red;
           }
         }
       }

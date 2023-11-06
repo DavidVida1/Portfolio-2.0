@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { LuGithub } from "react-icons/lu";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineDownload } from "react-icons/ai";
 
 const Contact = () => {
   useEffect(() => {
@@ -98,6 +98,16 @@ const Contact = () => {
                 <div className="link">
                   <a href="#">
                     <AiOutlineInstagram />
+                  </a>
+                </div>
+                <div className="link">
+                  <a
+                    href="/resume/DavidVidal_Resume.pdf"
+                    className="resume"
+                    download
+                  >
+                    <AiOutlineDownload />
+                    <p>CV</p>
                   </a>
                 </div>
               </div>
@@ -261,6 +271,14 @@ const ContactSection = styled.section`
                 transition: all 0.3s ease-in-out;
                 &:hover {
                   color: var(--color-danger);
+                }
+              }
+
+              & .resume {
+                grid-template-columns: 1fr 1fr;
+                gap: 5px;
+                & p {
+                  font-size: 2.5rem;
                 }
               }
             }

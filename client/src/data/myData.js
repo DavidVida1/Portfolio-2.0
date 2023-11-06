@@ -10,7 +10,7 @@ const navListData = [
   { _id: 1, href: "/", name: "Home", active: true },
   { _id: 2, href: "/about", name: "About", active: false },
   { _id: 3, href: "/portfolio", name: "Portfolio", active: false },
-  { _id: 4, href: "/contact", name: "Contact", active: false },
+  { _id: 4, href: "/contact", name: "Contact & Resume", active: false },
 ];
 
 export default navListData;
@@ -50,7 +50,7 @@ const projects = [
     category: "SCHOOL",
     name: "E-commerce School Project",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
+      "E-Commerce app for wearable tech (Group Project), I was part of the FrontEnd Team,  [React,JS,CSS,HTML] ",
     projectImg: allStar,
     link: "https://cb-group-project-client.vercel.app/",
   },
@@ -58,7 +58,7 @@ const projects = [
     category: "SCHOOL",
     name: "Car-Project-1",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
+      "App to set-up car meetings [React,JS,CSS,HTML,NodeJS,MongoDb]",
     projectImg: carV1,
     link: "#",
   },
@@ -66,7 +66,7 @@ const projects = [
     category: "UI/UX",
     name: "Lounge Website UI/UX",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
+      "Made a figma page than a landing page following a tutorial in order to learn and pratice Figma & BootStrap [React,BootStrap, HTML, CSS]",
     projectImg: lounge,
     link: "https://davidvida1.github.io/Lounge/",
   },
@@ -74,15 +74,14 @@ const projects = [
     category: "APP",
     name: "Car Project-2 ",
     description:
-      "Remade This APP project with a better understanding of fundation",
+      "Reworked the design of CarApp 1 to set-up car meetings with a new design FrontEnd, Login function incoming [React,JS,CSS,HTML,NodeJS, MongoDb]",
     projectImg: carV2,
     link: "#",
   },
   {
     category: "WEB",
     name: "This Portfolio",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada, nisi id accumsan pellentesque, nisi ex laoreet eros, non varius ante lorem eget lectus. Quisque eleifend mi sapien, nec gravida tortor feugiat sed. Praesent convallis lacinia tristique. Donec aliquam ut mauris nec cursus. Sed ac efficitur dui. Sed luctus felis.",
+    description: "This Portfolio was made by Me!! [React,JS,CSS,HTML]",
     projectImg: portfolio2,
     link: "#",
   },
