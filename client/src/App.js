@@ -1,7 +1,6 @@
 import GlobalStyles from "./GlobalStyles";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
 import Header from "./Header";
 import "./cssReset.css";
 import styled from "styled-components";
@@ -13,24 +12,6 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact.js";
 
 function App() {
-  /* const homeRef = useRef();
-  const aboutRef = useRef();
-  const portfolioRef = useRef();
-  const contactRef = useRef();
-
-  const sections = [
-    { name: "header", ref: homeRef, active: true },
-    { name: "about", ref: aboutRef, active: false },
-    { name: "portfolio", ref: portfolioRef, active: false },
-    { name: "contact", ref: contactRef, active: false },
-  ];
-
-  const handleSectionActive = (target) => {
-    sections.map((section) => {
-      console.log(section.ref.current);
-    });
-  };*/
-
   return (
     <BrowserRouter>
       <GlobalStyles />
