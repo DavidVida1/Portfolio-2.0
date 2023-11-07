@@ -1,5 +1,3 @@
-import { AiOutlineStock } from "react-icons/ai";
-import { BiCoffeeTogo } from "react-icons/bi";
 import allStar from "../assets/watch.jpg";
 import carV1 from "../assets/CarVersion1.PNG";
 import lounge from "../assets/drink.png";
@@ -76,14 +74,14 @@ const projects = [
     description:
       "Reworked the design of CarApp 1 to set-up car meetings with a new design FrontEnd, Login function incoming [React,JS,CSS,HTML,NodeJS, MongoDb]",
     projectImg: carV2,
-    link: "#",
+    link: "https://davidvida1.github.io/carV2/",
   },
   {
     category: "WEB",
     name: "This Portfolio",
     description: "This Portfolio was made by Me!! [React,JS,CSS,HTML]",
     projectImg: portfolio2,
-    link: "#",
+    link: "https://davidvida1.github.io/",
   },
 ];
 export { projects };
