@@ -1,7 +1,7 @@
 import GlobalStyles from "../GlobalStyles";
 import React from "react";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { navPortfolio, projects } from "../data/myData";
@@ -76,7 +76,11 @@ const Portoflio = ({ reference }) => {
             {selectedProjectsByCategory.map((project) => {
               return (
                 <a href={project.link}>
-                  <img className="a" src={project.projectImg} />
+                  <img
+                    className="a"
+                    src={project.projectImg}
+                    alt="projectImg"
+                  />
                   <p className="overlay">{project.description}</p>
                 </a>
               );
@@ -230,9 +234,17 @@ const PortoflioSection = styled.section`
           display: flex;
           flex-direction: column;
           align-items: center;
+          width: 100%;
           & a {
             height: clamp(300px, 20vw, 370px);
             width: clamp(300px, 50vw, 70%);
+          }
+        }
+
+        @media screen and (max-width: 800px) {
+          & a {
+            height: 100%;
+            width: 90%;
           }
         }
       }
