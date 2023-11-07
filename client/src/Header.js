@@ -36,7 +36,7 @@ const Header = ({ reference }) => {
     <HeaderWrapper data-aos="fade-up" data-aos-delay="100" ref={reference}>
       <nav className="navbar">
         <NavLink to={"/"}>
-          <img className="logo" src="/assets/DVlogo.png" />
+          <img className="logo" src="/assets/DVLogo.png" />
         </NavLink>
 
         <div className="overlay" id="burgNav">
