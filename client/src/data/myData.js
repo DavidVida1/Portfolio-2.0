@@ -56,7 +56,7 @@ const projects = [
     category: "SCHOOL",
     name: "Car-Project-1",
     description:
-      "App to set-up car meetings [React, JS, CSS, HTML, NodeJS, MongoDb]",
+      "App to set-up car meetings [React, JS, CSS, HTML, NodeJS, MongoDb] (Being fixed now)",
     projectImg: carV1,
     link: "#",
   },
