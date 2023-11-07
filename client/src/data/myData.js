@@ -48,7 +48,7 @@ const projects = [
     category: "SCHOOL",
     name: "E-commerce School Project",
     description:
-      "E-Commerce app for wearable tech (Group Project), I was part of the FrontEnd Team,  [React,JS,CSS,HTML] ",
+      "E-Commerce app for wearable tech (Group Project), I was part of the FrontEnd Team,  [React, JS, CSS, HTML] ",
     projectImg: allStar,
     link: "https://cb-group-project-client.vercel.app/",
   },
@@ -56,7 +56,7 @@ const projects = [
     category: "SCHOOL",
     name: "Car-Project-1",
     description:
-      "App to set-up car meetings [React,JS,CSS,HTML,NodeJS,MongoDb]",
+      "App to set-up car meetings [React, JS, CSS, HTML, NodeJS, MongoDb]",
     projectImg: carV1,
     link: "#",
   },
@@ -64,7 +64,7 @@ const projects = [
     category: "UI/UX",
     name: "Lounge Website UI/UX",
     description:
-      "Made a figma page than a landing page following a tutorial in order to learn and pratice Figma & BootStrap [React,BootStrap, HTML, CSS]",
+      "Made a figma page than a landing page following a tutorial in order to learn and pratice Figma & BootStrap [React, BootStrap, HTML, CSS]",
     projectImg: lounge,
     link: "https://davidvida1.github.io/Lounge/",
   },
@@ -72,14 +72,14 @@ const projects = [
     category: "APP",
     name: "Car Project-2 ",
     description:
-      "Reworked the design of CarApp 1 to set-up car meetings with a new design FrontEnd, Login function incoming [React,JS,CSS,HTML,NodeJS, MongoDb]",
+      "Reworked the design of CarApp 1 to set-up car meetings with a new design FrontEnd, Login function incoming [React, JS, CSS, HTML, NodeJS, MongoDb]",
     projectImg: carV2,
     link: "https://davidvida1.github.io/carV2/",
   },
   {
     category: "WEB",
     name: "This Portfolio",
-    description: "This Portfolio was made by Me!! [React,JS,CSS,HTML]",
+    description: "This Portfolio was made by Me!! [React, JS, CSS, HTML]",
     projectImg: portfolio2,
     link: "https://davidvida1.github.io/",
   },
