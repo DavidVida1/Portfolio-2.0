@@ -125,7 +125,7 @@ const HeaderWrapper = styled.header`
       justify-content: flex-end;
 
       &.open {
-        width: 100%;
+        transform: translateX(0);
       }
 
       @media screen and (max-width: 1200px) {
@@ -164,14 +164,15 @@ const HeaderWrapper = styled.header`
 
     & .overlay {
       height: 100vh;
-      width: 0;
+      width: 100vw;
+      transform: translateX(-100%);
       position: fixed; /* Stay in place */
       z-index: 4; /* Sit on top */
       left: 0;
       top: 0;
       background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
       overflow-x: hidden; /* Disable horizontal scroll */
-      transition: 0.5s;
+      transition: 0.5s all ease-in-out;
 
       & .closebtn {
         position: absolute;
