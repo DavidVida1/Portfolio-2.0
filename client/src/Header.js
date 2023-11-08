@@ -9,12 +9,21 @@ import navListData from "./data/myData";
 import NavListItem from "./NavListItem";
 
 const Header = ({ reference }) => {
-  const navigate = useNavigate();
   const [navList, setNavList] = useState(navListData);
 
   const openNav = () => {
     let element = document.getElementById("burgNav");
     element.classList.add("open");
+
+    /*Close nav on click on mobile*/
+    let menuLinks = document.querySelectorAll(".nav-link");
+    console.log(menuLinks);
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        let element = document.getElementById("burgNav");
+        element.classList.remove("open");
+      });
+    });
   };
 
   const closeNav = (e) => {
@@ -48,7 +57,7 @@ const Header = ({ reference }) => {
 
           {navList.map((item) => (
             <NavListItem
-              className="overlay-Content"
+              className="overlay-content"
               key={item._id}
               item={item}
             />

@@ -15,7 +15,6 @@ const NavListItem = ({ item }) => {
 
 const Wrapper = styled.div`
   margin: 0 2rem;
-  transition: all 0.3s ease-in-out;
 
   & .nav-link {
     display: block;
