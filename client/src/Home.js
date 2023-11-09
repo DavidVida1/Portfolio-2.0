@@ -211,6 +211,7 @@ const HomeSection = styled.section`
         & p {
           font-size: clamp(1rem, 3vw, 2.7rem);
           color: white;
+          letter-spacing: 2px;
           & span {
             font-size: clamp(1rem, 3vw, 2.7rem);
             text-shadow: rgba(216, 179, 144, 0.5) 0px 0 5px,
