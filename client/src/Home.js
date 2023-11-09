@@ -90,8 +90,9 @@ const Home = () => {
               Crafting visually captivating experiences with Code and Creativity
             </h3>
             <p>
-              I'm a junior Front-End web developer with a passion for design
-              with an<span> eager desire to stand out!</span>
+              I'm a junior Front-End web developer with a passion for design and
+              an
+              <span> eager desire to stand out!</span>
             </p>
           </div>
 
