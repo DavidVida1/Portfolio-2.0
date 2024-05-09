@@ -13,7 +13,7 @@ import Contact from "./pages/Contact.js";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolioV2/">
       <GlobalStyles />
       <Header />
       <PageWrapper />
