@@ -2,6 +2,7 @@ import GlobalStyles from "./GlobalStyles";
 import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
+import logo from "./assets/DVLogo.png";
 import styled from "styled-components";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -45,7 +46,7 @@ const Header = ({ reference }) => {
     <HeaderWrapper data-aos="fade-up" data-aos-delay="100" ref={reference}>
       <nav className="navbar">
         <NavLink to={"/"}>
-          <img className="logo" src="/assets/DVLogo.png" />
+          <img className="logo" src={logo} />
         </NavLink>
 
         <div className="overlay" id="burgNav">

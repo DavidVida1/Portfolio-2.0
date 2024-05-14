@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { skillsData } from "../data/myData";
 import { interestsData } from "../data/myData";
+import myPhoto from "../assets/myPhoto.png";
 import styled from "styled-components";
 import AOS from "aos";
 import Skill from "./Skills";
@@ -30,7 +31,7 @@ const About = ({ reference }) => {
           <p className="header">learn more about me</p>
 
           <aside className="infoSection">
-            <img src="/assets/Crop-Iphone1Black2.png" alt="myPhoto" />
+            <img src={myPhoto} alt="myPhoto" />
             <p>
               From microbiologist to web developer, I've shifted my focus from
               the microscopic world to the digital one, leveraging my analytical

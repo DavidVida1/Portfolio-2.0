@@ -5,7 +5,7 @@ import Header from "./Header";
 import "./cssReset.css";
 import styled from "styled-components";
 import form from "./assets/form.svg";
-
+import bg from "./assets/bgMontreal.jpg";
 import Home from "./Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
@@ -35,7 +35,7 @@ const PageWrapper = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/assets/bgMontreal.jpg");
+  background-image: url(${bg});
 
   background-position: top left;
   background-repeat: no-repeat;

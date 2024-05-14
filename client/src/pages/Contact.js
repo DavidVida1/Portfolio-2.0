@@ -100,16 +100,19 @@ const Contact = () => {
                     <AiOutlineInstagram />
                   </a>
                 </div>
-                <div className="link">
-                  <a
-                    href="/resume/DavidVidal_Resume.pdf"
-                    className="resume"
-                    download
-                  >
-                    <AiOutlineDownload />
-                    <p>CV</p>
-                  </a>
-                </div>
+
+                {/*
+                  <div className="link">
+                    <a
+                      href="/resume/DavidVidal_Resume.pdf"
+                      className="resume"
+                      download
+                    >
+                      <AiOutlineDownload />
+                      <p>CV</p>
+                    </a>
+                  </div>
+  */}
               </div>
             </div>
           </aside>
