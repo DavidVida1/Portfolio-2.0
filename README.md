@@ -18,3 +18,7 @@ In the process of developing Portfolio 2, I encountered new challenges and oppor
 - Use of NavLink: Explored the benefits of NavLink for navigation in React applications, enhancing the user experience with active styling and route management.
 - Webkit-ask-images: Learned about the webkit-ask-images CSS property and its application in styling web elements, providing enhanced visual appeal and customization options.
 - Proper BrowserRouter Setup: Mastered the configuration of BrowserRouter in React projects, ensuring smooth and reliable routing functionality for seamless navigation between different pages.
+
+## 📷Preview
+
+<img src="./client/src/assets/portfolioV2Screenshot.PNG" style="width: 100%;" alt="Home" />
