@@ -1,6 +1,6 @@
 # 💻Portfolio 2
 
-## 📝 Rough Resume
+## 📝 Rough Summary
 
 As a beginner Front-end Web Developer, I am passionate about creating engaging and functional websites. With a focus on simplicity and usability, I utilize React JS, JavaScript, HTML, and CSS. My projects showcase my dedication to learning and improving my skills in the dynamic world of web development.
 
